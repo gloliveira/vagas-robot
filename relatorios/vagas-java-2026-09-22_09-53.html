@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vagas Java Sênior/Pleno - 22/09/2026 09:53</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; color: #1a1a2e; }
+    .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 24px 0; }
+    .header-content { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 20px; }
+    .header-icon { font-size: 48px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+    .header-sub { font-size: 13px; opacity: 0.8; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .status-fontes { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; }
+    .tabela-status { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tabela-status th, .tabela-status td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; }
+    .tabela-status th { color: #666; font-size: 12px; text-transform: uppercase; }
+    .resumo { margin-bottom: 20px; }
+    .stats-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .stat-card { background: white; border-radius: 12px; padding: 16px 24px; text-align: center; min-width: 120px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 4px solid #ccc; }
+    .stat-total { border-top-color: #0f3460; }
+    .stat-senior { border-top-color: #e94560; }
+    .stat-pleno { border-top-color: #533483; }
+    .stat-remoto { border-top-color: #0a9396; }
+    .stat-hibrido { border-top-color: #ee9b00; }
+    .stat-num { display: block; font-size: 32px; font-weight: 700; color: #0f3460; }
+    .stat-label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+    .plataformas { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .plat-label { font-size: 13px; color: #666; font-weight: 600; }
+    .filtros { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .filtros-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .filtro-label { font-size: 13px; color: #666; font-weight: 600; }
+    .btn-filtro { padding: 6px 14px; border: 2px solid #e0e0e0; background: white; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+    .btn-filtro:hover, .btn-filtro.active { background: #0f3460; color: white; border-color: #0f3460; }
+    .busca-row { display: flex; align-items: center; gap: 12px; }
+    .busca-row input { flex: 1; padding: 10px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 14px; outline: none; transition: border-color 0.2s; }
+    .busca-row input:focus { border-color: #0f3460; }
+    .contador { font-size: 13px; color: #666; white-space: nowrap; }
+    .vagas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+    .vaga-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; border-left: 4px solid #0f3460; }
+    .vaga-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .vaga-header { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .badge { padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+    .badge-senior { background: #fde8ec; color: #c0392b; }
+    .badge-pleno { background: #ede7f6; color: #6a1b9a; }
+    .badge-remoto { background: #e0f7fa; color: #00695c; }
+    .badge-hibrido { background: #fff3e0; color: #e65100; }
+    .badge-presencial { background: #e8f5e9; color: #2e7d32; }
+    .plat-badge { padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .plat-linkedin { background: #0077b5; color: white; }
+    .plat-indeed { background: #003a9b; color: white; }
+    .plat-infojobs { background: #00a650; color: white; }
+    .plat-catho { background: #e31837; color: white; }
+    .plat-gupy { background: #1a73e8; color: white; }
+    .plat-vagascom { background: #ff6b00; color: white; }
+    .plat-programathor { background: #6c2bd9; color: white; }
+    .plat-outro { background: #666; color: white; }
+    .vaga-titulo { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.3; }
+    .vaga-empresa { font-size: 14px; color: #444; margin-bottom: 4px; }
+    .vaga-local { font-size: 13px; color: #666; margin-bottom: 10px; }
+    .vaga-techs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+    .tech-tag { background: #f0f4ff; color: #0f3460; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .vaga-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f0f0f0; }
+    .vaga-data { font-size: 12px; color: #999; }
+    .btn-candidatar { background: #0f3460; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; transition: background 0.2s; }
+    .btn-candidatar:hover { background: #e94560; }
+    .sem-vagas { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #666; }
+    .footer { text-align: center; padding: 24px; color: #999; font-size: 13px; margin-top: 40px; }
+    @media (max-width: 600px) { .vagas-grid { grid-template-columns: 1fr; } .stats-grid { justify-content: center; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-icon">☕</div>
+      <div>
+        <h1>Vagas Java Sênior / Pleno</h1>
+        <p class="header-sub">Gerado em 22/09/2026 09:53 &nbsp;|&nbsp; Vagas dos últimos 7 dias &nbsp;|&nbsp; Somente vagas remotas no Brasil</p>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="resumo">
+      <div class="stats-grid">
+        <div class="stat-card stat-total">
+          <span class="stat-num">47</span>
+          <span class="stat-label">Total de Vagas</span>
+        </div>
+        <div class="stat-card stat-senior">
+          <span class="stat-num">28</span>
+          <span class="stat-label">Sênior</span>
+        </div>
+        <div class="stat-card stat-pleno">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Pleno</span>
+        </div>
+        <div class="stat-card stat-remoto">
+          <span class="stat-num">47</span>
+          <span class="stat-label">Remoto</span>
+        </div>
+        <div class="stat-card stat-hibrido">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Presencial/Híbrido</span>
+        </div>
+      </div>
+      <div class="plataformas">
+        <span class="plat-label">Por plataforma:</span>
+        <span class="plat-badge plat-linkedin">LinkedIn (32)</span>
+        <span class="plat-badge plat-vagas.com">Vagas.com (1)</span>
+        <span class="plat-badge plat-gupy">Gupy (13)</span>
+        <span class="plat-badge plat-programathor">Programathor (1)</span>
+      </div>
+    </section>
+    <section class="filtros">
+      <div class="filtros-row">
+        <span class="filtro-label">Filtrar:</span>
+        <button class="btn-filtro active" onclick="filtrar('todos')">Todos</button>
+        <button class="btn-filtro" onclick="filtrar('remoto')">Remoto</button>
+        <button class="btn-filtro" onclick="filtrar('presencial')">Presencial/Híbrido</button>
+        <button class="btn-filtro" onclick="filtrar('senior')">Sênior</button>
+        <button class="btn-filtro" onclick="filtrar('pleno')">Pleno</button>
+        <button class="btn-filtro" onclick="filtrar('linkedin')">LinkedIn</button>
+        <button class="btn-filtro" onclick="filtrar('vagascom')">Vagas.com</button>
+        <button class="btn-filtro" onclick="filtrar('gupy')">Gupy</button>
+        <button class="btn-filtro" onclick="filtrar('programathor')">Programathor</button>
+      </div>
+      <div class="busca-row">
+        <input type="text" id="busca" placeholder="Buscar por título, empresa ou tecnologia..." oninput="buscarVagas()">
+        <span id="contador-vagas" class="contador">47 vagas exibidas</span>
+      </div>
+    </section>
+    <section class="status-fontes">
+      <h2 style="font-size:16px;margin:0 0 12px 0;">Status por plataforma</h2>
+      <table class="tabela-status">
+        <tr><th>Fonte</th><th>Status</th><th>Vagas</th><th>Detalhe</th></tr>
+        <tr><td>LinkedIn</td><td>SUCESSO</td><td>49</td><td>49 vagas</td></tr>
+        <tr><td>Gupy</td><td>SUCESSO</td><td>14</td><td>14 vagas</td></tr>
+        <tr><td>Vagas.com</td><td>SUCESSO</td><td>2</td><td>2 vagas</td></tr>
+        <tr><td>Programathor</td><td>SUCESSO</td><td>1</td><td>1 vagas</td></tr>
+        <tr><td>Catho</td><td>SEM_VAGAS</td><td>0</td><td>HTTP OK, página processada, 0 vagas encontradas</td></tr>
+        <tr><td>InfoJobs</td><td>SEM_VAGAS</td><td>0</td><td>HTTP OK, página processada, 0 vagas encontradas</td></tr>
+        <tr><td>Indeed</td><td>BLOQUEIO</td><td>0</td><td>BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&amp;l=Brasil&amp;fromage=14&amp;remotejob=1 (Cloudflare/CAPTCHA, HTTP 403)</td></tr>
+      </table>
+    </section>
+    <section class="vagas-grid" id="vagas-grid">
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="engenheiro de software sr. (java) pagbank java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Engenheiro de Software Sr. (Java)</h3>
+        <p class="vaga-empresa">🏢 PagBank</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-22</span>
+          <a href="https://br.linkedin.com/jobs/view/engenheiro-de-software-sr-java-at-pagbank-4460072220" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="analista desenvolvedor sênior - java - [remoto] picpay java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Analista Desenvolvedor Sênior - JAVA - [Remoto]</h3>
+        <p class="vaga-empresa">🏢 PicPay</p>
+        <p class="vaga-local">📍 São Paulo e Região</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/analista-desenvolvedor-s%C3%AAnior-java-remoto-at-picpay-4469962470" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="pessoa engenheira de software java sênior| aws | kafka | microsserviços itaú unibanco java, aws, kafka">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Pessoa Engenheira de Software Java Sênior| AWS | Kafka | Microsserviços</h3>
+        <p class="vaga-empresa">🏢 Itaú Unibanco</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">AWS</span><span class="tech-tag">Kafka</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/pessoa-engenheira-de-software-java-s%C3%AAnior-aws-kafka-microsservi%C3%A7os-at-ita%C3%BA-unibanco-4468105383" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="pessoa desenvolvedora (java ou kotlin) pl/sr elumini outdoing it java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Pessoa Desenvolvedora (Java ou Kotlin) Pl/Sr</h3>
+        <p class="vaga-empresa">🏢 Elumini Outdoing IT</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/pessoa-desenvolvedora-java-ou-kotlin-pl-sr-at-elumini-outdoing-it-4469945486" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="especialista java sevenred java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Especialista Java</h3>
+        <p class="vaga-empresa">🏢 Sevenred</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/especialista-java-at-sevenred-4469936727" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="desenvolvedor java it singular java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java</h3>
+        <p class="vaga-empresa">🏢 IT Singular</p>
+        <p class="vaga-local">📍 São Paulo, Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-java-at-it-singular-4467399886" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="cloud platforms mid-level software engineer - java / spring boot motorola solutions java, spring boot, spring">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Cloud Platforms Mid-Level Software Engineer - Java / Spring Boot</h3>
+        <p class="vaga-empresa">🏢 Motorola Solutions</p>
+        <p class="vaga-local">📍 Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/cloud-platforms-mid-level-software-engineer-java-spring-boot-at-motorola-solutions-4434028276" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="desenvolvedor (a) backend java pleno - exclusiva pcd ey java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor (a) Backend Java Pleno - Exclusiva PcD</h3>
+        <p class="vaga-empresa">🏢 EY</p>
+        <p class="vaga-local">📍 Fortaleza, CE</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-a-backend-java-pleno-exclusiva-pcd-at-ey-4403786652" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="desenvolvedor java pleno deliver it java, spring boot, spring, microserviços, rest, api, docker, kubernetes, azure, oracle, kafka, rabbitmq, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java Pleno</h3>
+        <p class="vaga-empresa">🏢 Deliver IT</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">Microserviços</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">Azure</span><span class="tech-tag">Oracle</span><span class="tech-tag">Kafka</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T18:16:37.790Z</span>
+          <a href="https://deliverit.gupy.io/job/eyJqb2JJZCI6MTI1NDU5NDYsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="desenvolvedor de sistemas fullstack java sênior deliver it java, spring boot, spring, microserviços, rest, api, docker, kubernetes, azure, oracle, kafka, rabbitmq, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor de Sistemas Fullstack Java Sênior</h3>
+        <p class="vaga-empresa">🏢 Deliver IT</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">Microserviços</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">Azure</span><span class="tech-tag">Oracle</span><span class="tech-tag">Kafka</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T17:45:25.052Z</span>
+          <a href="https://deliverit.gupy.io/job/eyJqb2JJZCI6MTI1NDU0MDEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="desenvolvedor java sr stefanini group java, spring boot, spring, rest, api, docker, aws, sql, postgresql, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">DESENVOLVEDOR JAVA SR</h3>
+        <p class="vaga-empresa">🏢 Stefanini Group</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">AWS</span><span class="tech-tag">SQL</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T14:28:18.639Z</span>
+          <a href="https://stefanini.gupy.io/job/eyJqb2JJZCI6MTI1NDIwNzIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="desenvolvedor(a) java pleno bemobi java, rest, docker, aws, sql, git, ci/cd">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor(a) Java Pleno</h3>
+        <p class="vaga-empresa">🏢 Bemobi</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">REST</span><span class="tech-tag">Docker</span><span class="tech-tag">AWS</span><span class="tech-tag">SQL</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T13:33:44.978Z</span>
+          <a href="https://bemobi.gupy.io/job/eyJqb2JJZCI6MTI0ODI0ODIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="analista de sistemas - java recrutamento para área de tecnologia com fit cultural e aderência técnica. java, spring boot, spring, rest, api, docker, sql, oracle, git, ci/cd">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Analista de Sistemas - Java</h3>
+        <p class="vaga-empresa">🏢 Recrutamento para área de tecnologia com Fit Cultural e Aderência Técnica.</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">SQL</span><span class="tech-tag">Oracle</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T13:33:00.321Z</span>
+          <a href="https://werecruiter.gupy.io/job/eyJqb2JJZCI6MTI1NDE4MTMsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="software engineer backend (java) softdesign java, spring boot, spring, rest, api, docker, kubernetes, aws, azure, oracle, mongodb, kafka, git, ci/cd">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Software Engineer Backend (Java)</h3>
+        <p class="vaga-empresa">🏢 SoftDesign</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">AWS</span><span class="tech-tag">Azure</span><span class="tech-tag">Oracle</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Kafka</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-21T13:26:42.312Z</span>
+          <a href="https://softdesign.gupy.io/job/eyJqb2JJZCI6MTI1NDE0MDAsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="desenvolvedor java - sp innolevels java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java - SP</h3>
+        <p class="vaga-empresa">🏢 innolevels</p>
+        <p class="vaga-local">📍 São Paulo e Região</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-20</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-java-sp-at-innolevels-4467303825" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor java sênior pwc brasil java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java Sênior</h3>
+        <p class="vaga-empresa">🏢 PwC Brasil</p>
+        <p class="vaga-local">📍 Piracicaba, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-19</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-java-s%C3%AAnior-at-pwc-brasil-4466931959" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="software developer specialist ii (java) - channels inter java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">SOFTWARE DEVELOPER SPECIALIST II (Java) - CHANNELS</h3>
+        <p class="vaga-empresa">🏢 Inter</p>
+        <p class="vaga-local">📍 Belo Horizonte, MG</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-19</span>
+          <a href="https://br.linkedin.com/jobs/view/software-developer-specialist-ii-java-channels-at-inter-4450732754" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="pessoa desenvolvedora backend sênior java/kotlin | corporate banking engineering c6 bank java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Pessoa Desenvolvedora Backend Sênior Java/Kotlin | Corporate Banking Engineering</h3>
+        <p class="vaga-empresa">🏢 C6 Bank</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-19</span>
+          <a href="https://br.linkedin.com/jobs/view/pessoa-desenvolvedora-backend-s%C3%AAnior-java-kotlin-corporate-banking-engineering-at-c6-bank-4429869905" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor back end sênior processmind ">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Back End Sênior</h3>
+        <p class="vaga-empresa">🏢 ProcessMind</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-19</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-back-end-s%C3%AAnior-at-processmind-4466998359" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior kotlin/java developer, brazil ci&amp;t java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Kotlin/Java Developer, Brazil</h3>
+        <p class="vaga-empresa">🏢 CI&amp;T</p>
+        <p class="vaga-local">📍 Campinas, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-kotlin-java-developer-brazil-at-ci-t-4450243832" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior software engineer (java, murex) exadel java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Software Engineer (Java, Murex)</h3>
+        <p class="vaga-empresa">🏢 Exadel</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-software-engineer-java-murex-at-exadel-4458947199" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior developer java, brasil ci&amp;t java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Developer Java, Brasil</h3>
+        <p class="vaga-empresa">🏢 CI&amp;T</p>
+        <p class="vaga-local">📍 Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-developer-java-brasil-at-ci-t-4469185267" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior backend engineer (java | kafka | cloud) endava java, kafka">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Backend Engineer (Java | Kafka | Cloud)</h3>
+        <p class="vaga-empresa">🏢 Endava</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Kafka</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-backend-engineer-java-kafka-cloud-at-endava-4467886514" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="middle/senior software engineer (java) exadel java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Middle/Senior Software Engineer (Java)</h3>
+        <p class="vaga-empresa">🏢 Exadel</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/middle-senior-software-engineer-java-at-exadel-4458923943" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor (a) back-end senior | spring boot avanade spring boot, spring">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor (a) Back-End Senior | Spring Boot</h3>
+        <p class="vaga-empresa">🏢 Avanade</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-a-back-end-senior-spring-boot-at-avanade-4469205786" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="desenvolvedor java sr riachuelo java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java SR</h3>
+        <p class="vaga-empresa">🏢 Riachuelo</p>
+        <p class="vaga-local">📍 Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-java-sr-at-riachuelo-4468023838" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="pessoa desenvolvedora fullstack react/kotlin/java especialista i (rgm e demanda) grupo boticário java, spring boot, spring, rest, api, aws, azure, sql, postgresql, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Pessoa Desenvolvedora Fullstack React/Kotlin/Java Especialista I (RGM e Demanda)</h3>
+        <p class="vaga-empresa">🏢 Grupo Boticário</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">AWS</span><span class="tech-tag">Azure</span><span class="tech-tag">SQL</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-18T19:33:07.247Z</span>
+          <a href="https://grupoboticario.gupy.io/job/eyJqb2JJZCI6MTI0ODU3NzEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior java developer bees java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Java Developer</h3>
+        <p class="vaga-empresa">🏢 BEES</p>
+        <p class="vaga-local">📍 Campinas, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-17</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-java-developer-at-bees-4468814578" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="engenheiro(a) de software sênior | java, cloud &amp; microsserviços tata consultancy services java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Engenheiro(a) de Software Sênior | Java, Cloud &amp; Microsserviços</h3>
+        <p class="vaga-empresa">🏢 Tata Consultancy Services</p>
+        <p class="vaga-local">📍 São Paulo, Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-17</span>
+          <a href="https://br.linkedin.com/jobs/view/engenheiro-a-de-software-s%C3%AAnior-java-cloud-microsservi%C3%A7os-at-tata-consultancy-services-4468801172" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="desenvolvedor(a) backend (java) pleno porto java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor(a) Backend (Java) Pleno</h3>
+        <p class="vaga-empresa">🏢 Porto</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-17</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-a-backend-java-pleno-at-porto-4456777057" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="desenvolvedor de software sênior(java) montreal | tecnologia e inovação java, spring boot, spring, rest, api, jpa, hibernate, maven, gradle, git, junit, mockito">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor de Software Sênior(Java)</h3>
+        <p class="vaga-empresa">🏢 Montreal | Tecnologia e Inovação</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">JPA</span><span class="tech-tag">Hibernate</span><span class="tech-tag">Maven</span><span class="tech-tag">Gradle</span><span class="tech-tag">Git</span><span class="tech-tag">JUnit</span><span class="tech-tag">Mockito</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-17T19:39:57.043Z</span>
+          <a href="https://montreal.gupy.io/job/eyJqb2JJZCI6MTI0NjY5OTQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="desenvolvedor fullstack java + angular sênior (4791) keep simple java, spring boot, spring, microserviços, rest, api, jpa, hibernate, oracle, kafka, rabbitmq, git, ci/cd, swagger">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Fullstack Java + Angular Sênior (4791)</h3>
+        <p class="vaga-empresa">🏢 Keep Simple</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">Microserviços</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">JPA</span><span class="tech-tag">Hibernate</span><span class="tech-tag">Oracle</span><span class="tech-tag">Kafka</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span><span class="tech-tag">Swagger</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-17T18:38:56.601Z</span>
+          <a href="https://keepsimple.gupy.io/job/eyJqb2JJZCI6MTI1MTYxNTgsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior software engineer (java, aws) exadel java, aws">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Software Engineer (Java, AWS)</h3>
+        <p class="vaga-empresa">🏢 Exadel</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">AWS</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-software-engineer-java-aws-at-exadel-4458937753" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor(a) java pleno e sênior soc - software de saúde e segurança do trabalho java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor(a) Java Pleno e Sênior</h3>
+        <p class="vaga-empresa">🏢 SOC - Software de Saúde e Segurança do Trabalho</p>
+        <p class="vaga-local">📍 Santos, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-a-java-pleno-e-s%C3%AAnior-at-soc-software-integrado-de-gest%C3%A3o-ocupacional-4466200230" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="middle/senior java developer devexperts java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Middle/Senior Java Developer</h3>
+        <p class="vaga-empresa">🏢 Devexperts</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16</span>
+          <a href="https://br.linkedin.com/jobs/view/middle-senior-java-developer-at-devexperts-4468208144" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="engenheiro(a) de software pleno – java elo java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Engenheiro(a) de Software Pleno – Java</h3>
+        <p class="vaga-empresa">🏢 Elo</p>
+        <p class="vaga-local">📍 Barueri, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16</span>
+          <a href="https://br.linkedin.com/jobs/view/engenheiro-a-de-software-pleno-%E2%80%93-java-at-elo-4468295487" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="linkedin" data-texto="pessoa desenvolvedora backend java sr bradesco java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Pessoa Desenvolvedora Backend Java SR</h3>
+        <p class="vaga-empresa">🏢 Bradesco</p>
+        <p class="vaga-local">📍 Curitiba, PR</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16</span>
+          <a href="https://br.linkedin.com/jobs/view/pessoa-desenvolvedora-backend-java-sr-at-banco-bradesco-4465998830" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="22249-desenvolvedor (a) full stack java hitss brasil java, spring boot, spring, rest, api, jpa, hibernate, maven, docker, kubernetes, sql, git, ci/cd">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Não especificado</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">22249-Desenvolvedor (a) Full Stack Java</h3>
+        <p class="vaga-empresa">🏢 Hitss Brasil</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">REST</span><span class="tech-tag">API</span><span class="tech-tag">JPA</span><span class="tech-tag">Hibernate</span><span class="tech-tag">Maven</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">SQL</span><span class="tech-tag">Git</span><span class="tech-tag">CI/CD</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16T21:19:33.267Z</span>
+          <a href="https://globalhitss.gupy.io/job/eyJqb2JJZCI6MTI0NzE0MjEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="gupy" data-texto="desenvolvedor java pleno stefanini group java, spring boot, spring, api, docker, kubernetes, aws, azure, sql, kafka, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java Pleno</h3>
+        <p class="vaga-empresa">🏢 Stefanini Group</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">AWS</span><span class="tech-tag">Azure</span><span class="tech-tag">SQL</span><span class="tech-tag">Kafka</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16T18:10:59.444Z</span>
+          <a href="https://stefanini.gupy.io/job/eyJqb2JJZCI6MTI0Mzk4NDksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="desenvolvedor java sênior stefanini group java, spring boot, spring, api, docker, kubernetes, aws, azure, sql, kafka, git">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java Sênior</h3>
+        <p class="vaga-empresa">🏢 Stefanini Group</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">API</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">AWS</span><span class="tech-tag">Azure</span><span class="tech-tag">SQL</span><span class="tech-tag">Kafka</span><span class="tech-tag">Git</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16T17:55:18.865Z</span>
+          <a href="https://stefanini.gupy.io/job/eyJqb2JJZCI6MTI0Mzk4NTksInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="gupy" data-texto="analista desenvolvedor sr (desenvolvedor sênior fullstack java, angular, springboot)- rha3834 spread tecnologia java, spring">
+        <div class="vaga-header">
+          <span class="plat-badge plat-gupy">Gupy</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">ANALISTA DESENVOLVEDOR SR (Desenvolvedor Sênior Fullstack Java, Angular, SpringBoot)- RHA3834</h3>
+        <p class="vaga-empresa">🏢 Spread Tecnologia</p>
+        <p class="vaga-local">📍 Remoto - Brasil</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-16T17:49:10.637Z</span>
+          <a href="https://spread.gupy.io/job/eyJqb2JJZCI6MTI1MDEyMzYsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor java senior (bt) firedev it java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java Senior (BT)</h3>
+        <p class="vaga-empresa">🏢 Firedev IT</p>
+        <p class="vaga-local">📍 São Paulo, SP</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-15</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-java-senior-bt-at-firedev-it-4467794441" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="senior backend software engineer - campinas/sp agibank ">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Senior Backend Software Engineer - Campinas/SP</h3>
+        <p class="vaga-empresa">🏢 Agibank</p>
+        <p class="vaga-local">📍 Campinas, SP</p>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-15</span>
+          <a href="https://br.linkedin.com/jobs/view/senior-backend-software-engineer-campinas-sp-at-agibank-4343579284" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="desenvolvedor full stack java sr - bh grupo sfa java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Full Stack Java Sr - BH</h3>
+        <p class="vaga-empresa">🏢 Grupo SFA</p>
+        <p class="vaga-local">📍 Belo Horizonte e Região</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-15</span>
+          <a href="https://br.linkedin.com/jobs/view/desenvolvedor-full-stack-java-sr-bh-at-grupo-sfa-4465936073" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="senior" data-plataforma="linkedin" data-texto="[wg] analista desenvolvedor fullstack sênior (foco em backend) iblue ">
+        <div class="vaga-header">
+          <span class="plat-badge plat-linkedin">LinkedIn</span>
+          <span class="badge badge-senior">Sênior</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">[WG] ANALISTA DESENVOLVEDOR FULLSTACK SÊNIOR (Foco em Backend)</h3>
+        <p class="vaga-empresa">🏢 iblue</p>
+        <p class="vaga-local">📍 Jaraguá do Sul, SC</p>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 2026-09-15</span>
+          <a href="https://br.linkedin.com/jobs/view/wg-analista-desenvolvedor-fullstack-s%C3%AAnior-foco-em-backend-at-iblue-4466143588" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="vagascom" data-texto="desenvolvedor java synchro java">
+        <div class="vaga-header">
+          <span class="plat-badge plat-vagascom">Vagas.com</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor Java</h3>
+        <p class="vaga-empresa">🏢 Synchro</p>
+        <p class="vaga-local">📍 100% Home Office</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 Há 7 dias</span>
+          <a href="https://www.vagas.com.br/vagas/v2835043/desenvolvedor-java" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+      <div class="vaga-card" data-modalidade="remoto" data-nivel="pleno" data-plataforma="programathor" data-texto="desenvolvedor(a) back-end pleno crescer rh java, spring boot, spring, oracle">
+        <div class="vaga-header">
+          <span class="plat-badge plat-programathor">Programathor</span>
+          <span class="badge badge-pleno">Pleno</span>
+          <span class="badge badge-remoto">Remoto</span>
+        </div>
+        <h3 class="vaga-titulo">Desenvolvedor(a) Back-End Pleno</h3>
+        <p class="vaga-empresa">🏢 Crescer RH</p>
+        <p class="vaga-local">📍 Remoto</p>
+        <div class="vaga-techs"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring</span><span class="tech-tag">Oracle</span></div>
+        <div class="vaga-footer">
+          <span class="vaga-data">📅 Recente</span>
+          <a href="https://programathor.com.br/jobs/33765-desenvolvedor-a-back-end-pleno" target="_blank" rel="noopener noreferrer" class="btn-candidatar">Ver Vaga →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Robô de Vagas Java &nbsp;|&nbsp; Gerado em 22/09/2026 09:53 &nbsp;|&nbsp; Vagas dos últimos 14 dias</p>
+  </footer>
+  <script>
+    let filtroAtual = 'todos';
+    function filtrar(tipo) {
+      filtroAtual = tipo;
+      document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      aplicarFiltros();
+    }
+    function buscarVagas() { aplicarFiltros(); }
+    function aplicarFiltros() {
+      const busca = document.getElementById('busca').value.toLowerCase();
+      const cards = document.querySelectorAll('.vaga-card');
+      let visiveis = 0;
+      cards.forEach(card => {
+        const modalidade = card.dataset.modalidade || '';
+        const nivel = card.dataset.nivel || '';
+        const plataforma = card.dataset.plataforma || '';
+        const texto = card.dataset.texto || '';
+        let mostrar = true;
+        if (filtroAtual === 'remoto') mostrar = modalidade === 'remoto';
+        else if (filtroAtual === 'presencial') mostrar = modalidade === 'presencial';
+        else if (filtroAtual === 'senior') mostrar = nivel === 'senior';
+        else if (filtroAtual === 'pleno') mostrar = nivel === 'pleno';
+        else if (filtroAtual !== 'todos') mostrar = plataforma === filtroAtual;
+        if (mostrar && busca) mostrar = texto.includes(busca);
+        card.style.display = mostrar ? '' : 'none';
+        if (mostrar) visiveis++;
+      });
+      document.getElementById('contador-vagas').textContent = visiveis + ' vagas exibidas';
+    }
+  </script>
+</body>
+</html>

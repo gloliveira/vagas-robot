@@ -1,0 +1,192 @@
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 18/09/2026 09:12:00
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-18 09:12:00 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java developer senior'
+2026-09-18 09:12:07 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 14 vagas remotas para 'Java developer senior'
+2026-09-18 09:12:07 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java Spring Boot developer'
+2026-09-18 09:12:15 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 13 vagas remotas para 'Java Spring Boot developer'
+2026-09-18 09:12:15 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'JSF'
+2026-09-18 09:12:18 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-18 09:12:18 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'PrimeFaces'
+2026-09-18 09:12:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-18 09:12:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Legado'
+2026-09-18 09:12:23 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-18 09:12:23 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Pl'
+2026-09-18 09:12:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-18 09:12:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'SR'
+2026-09-18 09:12:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'SR'
+2026-09-18 09:12:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'desenvolvedor Java pleno senior'
+2026-09-18 09:12:35 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 15 vagas remotas para 'desenvolvedor Java pleno senior'
+2026-09-18 09:12:35 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Total de vagas encontradas: 42
+2026-09-18 09:12:35 [INFO ] b.com.vagas.scheduler.AgendadorBusca - LinkedIn: status=SUCESSO | 42 vagas | vagas=42
+2026-09-18 09:12:35 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-18 09:12:35 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-18 09:12:35 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-18 09:12:42 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 11 vagas para 'java'
+2026-09-18 09:12:42 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-18 09:12:44 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'spring boot'
+2026-09-18 09:12:44 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-18 09:12:46 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-18 09:12:46 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 11
+2026-09-18 09:12:46 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: status=SUCESSO | 11 vagas | vagas=11
+2026-09-18 09:12:46 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-18 09:12:46 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-18 09:12:46 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-18 09:12:51 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-18 09:12:51 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-18 09:12:53 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-java-spring-boot'
+2026-09-18 09:12:53 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-18 09:12:57 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-18 09:12:57 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-18 09:13:00 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-18 09:13:00 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 2
+2026-09-18 09:13:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: status=SUCESSO | 2 vagas | vagas=2
+2026-09-18 09:13:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-18 09:13:00 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-18 09:13:05 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 3
+2026-09-18 09:13:05 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: status=SUCESSO | 3 vagas | vagas=3
+2026-09-18 09:13:05 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-18 09:13:05 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-18 09:13:05 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-18 09:13:09 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-18 09:13:09 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-18 09:13:11 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'java-spring-boot'
+2026-09-18 09:13:11 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-18 09:13:14 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-18 09:13:14 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-18 09:13:16 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-18 09:13:16 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 0
+2026-09-18 09:13:16 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-18 09:13:16 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-18 09:13:16 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-18 09:13:16 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-18 09:13:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-18 09:13:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-18 09:13:21 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-18 09:13:21 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-18 09:13:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-18 09:13:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-18 09:13:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-18 09:13:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 0
+2026-09-18 09:13:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-18 09:13:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-18 09:13:26 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-18 09:13:26 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas no Brasil: 'desenvolvedor Java senior'
+2026-09-18 09:13:28 [ERROR] br.com.vagas.scraper.ScraperBase - Indeed - página 1: BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403)
+2026-09-18 09:13:28 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-18 09:13:28 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: status=BLOQUEIO | BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403) | vagas=0
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 58
+2026-09-18 09:13:28 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-18_09-13.html
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-18_09-13.html
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 58
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   LinkedIn → SUCESSO (42 vagas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Gupy → SUCESSO (11 vagas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Vagas.com → SUCESSO (2 vagas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Programathor → SUCESSO (3 vagas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Catho → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   InfoJobs → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Indeed → BLOQUEIO (BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403))
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 09:13:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 18/09/2026 14:05:23
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-18 14:05:23 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java developer senior'
+2026-09-18 14:05:30 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 16 vagas remotas para 'Java developer senior'
+2026-09-18 14:05:30 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java Spring Boot developer'
+2026-09-18 14:05:39 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 13 vagas remotas para 'Java Spring Boot developer'
+2026-09-18 14:05:39 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'JSF'
+2026-09-18 14:05:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-18 14:05:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'PrimeFaces'
+2026-09-18 14:05:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-18 14:05:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Legado'
+2026-09-18 14:05:48 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-18 14:05:48 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Pl'
+2026-09-18 14:05:50 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-18 14:05:50 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'SR'
+2026-09-18 14:05:53 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'SR'
+2026-09-18 14:05:53 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'desenvolvedor Java pleno senior'
+2026-09-18 14:06:00 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 16 vagas remotas para 'desenvolvedor Java pleno senior'
+2026-09-18 14:06:00 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Total de vagas encontradas: 45
+2026-09-18 14:06:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - LinkedIn: status=SUCESSO | 45 vagas | vagas=45
+2026-09-18 14:06:00 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-18 14:06:00 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-18 14:06:00 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-18 14:06:07 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 11 vagas para 'java'
+2026-09-18 14:06:07 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-18 14:06:09 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'spring boot'
+2026-09-18 14:06:09 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-18 14:06:11 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-18 14:06:11 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 11
+2026-09-18 14:06:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: status=SUCESSO | 11 vagas | vagas=11
+2026-09-18 14:06:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-18 14:06:11 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-18 14:06:11 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-18 14:06:16 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-18 14:06:16 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-18 14:06:19 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-java-spring-boot'
+2026-09-18 14:06:19 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-18 14:06:24 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-18 14:06:24 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-18 14:06:26 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-18 14:06:26 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 2
+2026-09-18 14:06:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: status=SUCESSO | 2 vagas | vagas=2
+2026-09-18 14:06:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-18 14:06:26 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-18 14:06:32 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 3
+2026-09-18 14:06:32 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: status=SUCESSO | 3 vagas | vagas=3
+2026-09-18 14:06:32 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-18 14:06:32 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-18 14:06:32 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-18 14:06:36 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-18 14:06:36 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-18 14:06:39 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'java-spring-boot'
+2026-09-18 14:06:39 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-18 14:06:41 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-18 14:06:41 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-18 14:06:44 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-18 14:06:44 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 0
+2026-09-18 14:06:44 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-18 14:06:44 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-18 14:06:44 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-18 14:06:44 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-18 14:06:47 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-18 14:06:47 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-18 14:06:49 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-18 14:06:49 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-18 14:06:51 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-18 14:06:51 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-18 14:06:54 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-18 14:06:54 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 0
+2026-09-18 14:06:54 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-18 14:06:54 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-18 14:06:54 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-18 14:06:54 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas no Brasil: 'desenvolvedor Java senior'
+2026-09-18 14:06:56 [ERROR] br.com.vagas.scraper.ScraperBase - Indeed - página 1: BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403)
+2026-09-18 14:06:56 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-18 14:06:56 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: status=BLOQUEIO | BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403) | vagas=0
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 61
+2026-09-18 14:06:56 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-18_14-06.html
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-18_14-06.html
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 61
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   LinkedIn → SUCESSO (45 vagas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Gupy → SUCESSO (11 vagas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Vagas.com → SUCESSO (2 vagas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Programathor → SUCESSO (3 vagas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Catho → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   InfoJobs → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Indeed → BLOQUEIO (BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403))
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-18 14:06:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.

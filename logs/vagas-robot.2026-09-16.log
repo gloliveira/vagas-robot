@@ -1,0 +1,567 @@
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 16/09/2026 19:48:18
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-16 19:48:18 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java developer senior'
+2026-09-16 19:48:20 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Java developer senior'
+2026-09-16 19:48:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java developer senior'
+2026-09-16 19:48:22 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:22 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Java developer senior'
+2026-09-16 19:48:22 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java Spring Boot developer'
+2026-09-16 19:48:24 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:24 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Java Spring Boot developer'
+2026-09-16 19:48:24 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java Spring Boot developer'
+2026-09-16 19:48:26 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:26 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Java Spring Boot developer'
+2026-09-16 19:48:26 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'JSF'
+2026-09-16 19:48:28 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-16 19:48:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'JSF'
+2026-09-16 19:48:30 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:30 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'JSF'
+2026-09-16 19:48:30 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'PrimeFaces'
+2026-09-16 19:48:32 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-16 19:48:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'PrimeFaces'
+2026-09-16 19:48:34 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:34 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'PrimeFaces'
+2026-09-16 19:48:34 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Legado'
+2026-09-16 19:48:36 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:36 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-16 19:48:36 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Legado'
+2026-09-16 19:48:38 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:38 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Legado'
+2026-09-16 19:48:38 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Pl'
+2026-09-16 19:48:40 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:40 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-16 19:48:40 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Pl'
+2026-09-16 19:48:42 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Pl'
+2026-09-16 19:48:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'SR'
+2026-09-16 19:48:43 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:43 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'SR'
+2026-09-16 19:48:43 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'SR'
+2026-09-16 19:48:45 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'SR'
+2026-09-16 19:48:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'desenvolvedor Java pleno senior'
+2026-09-16 19:48:48 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:48 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'desenvolvedor Java pleno senior'
+2026-09-16 19:48:48 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'desenvolvedor Java pleno senior'
+2026-09-16 19:48:50 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:50 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'desenvolvedor Java pleno senior'
+2026-09-16 19:48:50 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Total de vagas encontradas: 0
+2026-09-16 19:48:50 [INFO ] b.com.vagas.scheduler.AgendadorBusca - LinkedIn: 0 vagas encontradas
+2026-09-16 19:48:50 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-16 19:48:50 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-16 19:48:50 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-16 19:48:52 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:52 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'java'
+2026-09-16 19:48:52 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-16 19:48:54 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:54 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'spring boot'
+2026-09-16 19:48:54 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-16 19:48:56 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:56 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-16 19:48:56 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 0
+2026-09-16 19:48:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: 0 vagas encontradas
+2026-09-16 19:48:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-16 19:48:56 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-16 19:48:56 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-16 19:48:58 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:48:58 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-16 19:48:58 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-16 19:49:00 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:00 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-java-spring-boot'
+2026-09-16 19:49:00 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 19:49:01 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 19:49:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 19:49:04 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:04 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 19:49:04 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 0
+2026-09-16 19:49:04 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: 0 vagas encontradas
+2026-09-16 19:49:04 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-16 19:49:04 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-16 19:49:06 [WARN ] b.c.v.scraper.ProgramathorScraper - Programathor - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:06 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 0
+2026-09-16 19:49:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: 0 vagas encontradas
+2026-09-16 19:49:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-16 19:49:06 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-16 19:49:06 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-16 19:49:08 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:08 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-16 19:49:08 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-16 19:49:09 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:09 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'java-spring-boot'
+2026-09-16 19:49:09 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-16 19:49:11 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:11 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-16 19:49:11 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-16 19:49:13 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:13 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-16 19:49:13 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 0
+2026-09-16 19:49:13 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: 0 vagas encontradas
+2026-09-16 19:49:13 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-16 19:49:13 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-16 19:49:13 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java'
+2026-09-16 19:49:15 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:15 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java'
+2026-09-16 19:49:15 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-16 19:49:17 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:17 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-16 19:49:17 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'java spring boot'
+2026-09-16 19:49:18 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'java spring boot'
+2026-09-16 19:49:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-16 19:49:20 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:20 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-16 19:49:20 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java pleno'
+2026-09-16 19:49:22 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:22 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java pleno'
+2026-09-16 19:49:22 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-16 19:49:24 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-16 19:49:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java senior'
+2026-09-16 19:49:27 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:27 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java senior'
+2026-09-16 19:49:27 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-16 19:49:28 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:28 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-16 19:49:28 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 0
+2026-09-16 19:49:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: 0 vagas encontradas
+2026-09-16 19:49:28 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-16 19:49:28 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-16 19:49:28 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas: 'desenvolvedor Java senior'
+2026-09-16 19:49:30 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:30 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-16 19:49:30 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando em Salvador: 'desenvolvedor Java senior'
+2026-09-16 19:49:33 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed - Erro ao buscar página 1: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+2026-09-16 19:49:33 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas em Salvador para 'desenvolvedor Java senior'
+2026-09-16 19:49:33 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed bloqueia buscas automatizadas (Cloudflare/CAPTCHA). As demais plataformas seguem normalmente.
+2026-09-16 19:49:33 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: 0 vagas encontradas
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 0
+2026-09-16 19:49:33 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_19-49.html
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_19-49.html
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 0
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:49:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 16/09/2026 19:52:20
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-16 19:52:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java developer senior'
+2026-09-16 19:52:22 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:22 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Java developer senior'
+2026-09-16 19:52:22 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java developer senior'
+2026-09-16 19:52:25 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Java developer senior'
+2026-09-16 19:52:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java Spring Boot developer'
+2026-09-16 19:52:27 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:27 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Java Spring Boot developer'
+2026-09-16 19:52:27 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java Spring Boot developer'
+2026-09-16 19:52:29 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:29 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Java Spring Boot developer'
+2026-09-16 19:52:29 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'JSF'
+2026-09-16 19:52:31 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:31 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-16 19:52:31 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'JSF'
+2026-09-16 19:52:32 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'JSF'
+2026-09-16 19:52:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'PrimeFaces'
+2026-09-16 19:52:35 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:35 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-16 19:52:35 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'PrimeFaces'
+2026-09-16 19:52:37 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'PrimeFaces'
+2026-09-16 19:52:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Legado'
+2026-09-16 19:52:40 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:40 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-16 19:52:40 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Legado'
+2026-09-16 19:52:42 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Legado'
+2026-09-16 19:52:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Pl'
+2026-09-16 19:52:45 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-16 19:52:45 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Pl'
+2026-09-16 19:52:47 [WARN ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:47 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Pl'
+2026-09-16 19:52:47 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'SR'
+2026-09-16 19:52:50 [ERROR] b.com.vagas.scheduler.AgendadorBusca - Erro no scraper LinkedIn: Object must not be null
+org.jsoup.helper.ValidationException: Object must not be null
+	at org.jsoup.helper.HttpConnection$Response.body(HttpConnection.java:985)
+	at br.com.vagas.util.HttpUtil.get(HttpUtil.java:44)
+	at br.com.vagas.util.HttpUtil.get(HttpUtil.java:31)
+	at br.com.vagas.scraper.LinkedInScraper.buscarComParametros(LinkedInScraper.java:112)
+	at br.com.vagas.scraper.LinkedInScraper.buscarVagas(LinkedInScraper.java:84)
+	at br.com.vagas.scheduler.AgendadorBusca.executarBusca(AgendadorBusca.java:112)
+	at br.com.vagas.scheduler.AgendadorBusca.executarManualmente(AgendadorBusca.java:78)
+	at br.com.vagas.VagasRobot.executarMenuInterativo(VagasRobot.java:93)
+	at br.com.vagas.VagasRobot.main(VagasRobot.java:69)
+2026-09-16 19:52:50 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-16 19:52:50 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-16 19:52:50 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-16 19:52:52 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:52 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'java'
+2026-09-16 19:52:52 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-16 19:52:55 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:55 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'spring boot'
+2026-09-16 19:52:55 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-16 19:52:58 [WARN ] br.com.vagas.scraper.GupyScraper - Gupy - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:52:58 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-16 19:52:58 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 0
+2026-09-16 19:52:58 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: 0 vagas encontradas
+2026-09-16 19:52:58 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-16 19:52:58 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-16 19:52:58 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-16 19:53:01 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-16 19:53:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-16 19:53:02 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:02 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-java-spring-boot'
+2026-09-16 19:53:02 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 19:53:05 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:05 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 19:53:05 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 19:53:08 [WARN ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:08 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 19:53:08 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 0
+2026-09-16 19:53:08 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: 0 vagas encontradas
+2026-09-16 19:53:08 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-16 19:53:08 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-16 19:53:10 [WARN ] b.c.v.scraper.ProgramathorScraper - Programathor - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:10 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 0
+2026-09-16 19:53:10 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: 0 vagas encontradas
+2026-09-16 19:53:10 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-16 19:53:10 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-16 19:53:10 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-16 19:53:13 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:13 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-16 19:53:13 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-16 19:53:15 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:15 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'java-spring-boot'
+2026-09-16 19:53:15 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-16 19:53:17 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:17 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-16 19:53:17 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-16 19:53:18 [WARN ] br.com.vagas.scraper.CathoScraper - Catho - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:18 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-16 19:53:18 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 0
+2026-09-16 19:53:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: 0 vagas encontradas
+2026-09-16 19:53:18 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-16 19:53:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-16 19:53:18 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java'
+2026-09-16 19:53:21 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:21 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java'
+2026-09-16 19:53:21 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-16 19:53:24 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-16 19:53:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'java spring boot'
+2026-09-16 19:53:27 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:27 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'java spring boot'
+2026-09-16 19:53:27 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-16 19:53:29 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-16 19:53:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java pleno'
+2026-09-16 19:53:32 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:32 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java pleno'
+2026-09-16 19:53:32 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-16 19:53:34 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:34 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-16 19:53:34 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java senior'
+2026-09-16 19:53:37 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:37 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java senior'
+2026-09-16 19:53:37 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-16 19:53:39 [WARN ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:39 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-16 19:53:39 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 0
+2026-09-16 19:53:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: 0 vagas encontradas
+2026-09-16 19:53:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-16 19:53:39 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-16 19:53:39 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas: 'desenvolvedor Java senior'
+2026-09-16 19:53:42 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:42 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-16 19:53:42 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando em Salvador: 'desenvolvedor Java senior'
+2026-09-16 19:53:45 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed - Erro ao buscar página 1: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2026-09-16 19:53:45 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas em Salvador para 'desenvolvedor Java senior'
+2026-09-16 19:53:45 [WARN ] br.com.vagas.scraper.IndeedScraper - Indeed bloqueia buscas automatizadas (Cloudflare/CAPTCHA). As demais plataformas seguem normalmente.
+2026-09-16 19:53:45 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: 0 vagas encontradas
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 0
+2026-09-16 19:53:45 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_19-53.html
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_19-53.html
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 0
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 19:53:45 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.
+2026-09-16 20:03:39 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:03:39 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=(não definido) keyStore=(não definido)
+2026-09-16 20:03:40 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:04:46 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:04:46 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=(não definido) keyStore=(não definido)
+2026-09-16 20:04:46 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:05:45 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:05:45 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=(não definido) keyStore=(não definido)
+2026-09-16 20:05:45 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:06:47 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:06:47 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=(não definido) keyStore=(não definido)
+2026-09-16 20:06:47 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:06:54 [WARN ] br.com.vagas.util.SslAmbiente - Removido javax.net.ssl.trustStoreType=Windows-ROOT. Este JRE não oferece o KeyStore Windows-ROOT; HTTPS volta a usar o cacerts padrão do Java.
+2026-09-16 20:06:54 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:06:54 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=(não definido) keyStore=(não definido)
+2026-09-16 20:06:54 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:11:44 [INFO ] br.com.vagas.util.SslAmbiente - Truststore padrão do JRE acrescido da CA Check Point Harmony SASE (não é trust-all).
+2026-09-16 20:11:44 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\openlogic-openjdk-jre-11.0.26+4-windows-x64 java.version=11.0.26
+2026-09-16 20:11:44 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=C:\Users\User\AppData\Local\Temp\vagas-robot-truststore-9941777388897941032.jks trustStoreType=pkcs12 keyStore=(não definido)
+2026-09-16 20:11:44 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:16:13 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:16:13 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\jdk-21_windows-x64_bin\jdk-21.0.10 java.version=21.0.10
+2026-09-16 20:16:13 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:16:13 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:16:21 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:16:21 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Program Files (x86)\Java\jdk-21_windows-x64_bin\jdk-21.0.10 java.version=21.0.10
+2026-09-16 20:16:21 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:16:21 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:20:59 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:20:59 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Users\User\.jdks\ms-21.0.12.1 java.version=21.0.12.1
+2026-09-16 20:20:59 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:20:59 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:21:06 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:21:06 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Users\User\.jdks\ms-21.0.12.1 java.version=21.0.12.1
+2026-09-16 20:21:06 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:21:06 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:22:03 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:22:03 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Users\User\.jdks\ms-21.0.12.1 java.version=21.0.12.1
+2026-09-16 20:22:03 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:22:03 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 16/09/2026 20:22:11
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-16 20:22:11 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java developer senior'
+2026-09-16 20:22:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 28 vagas remotas para 'Java developer senior'
+2026-09-16 20:22:20 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java developer senior'
+2026-09-16 20:22:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 1 vagas em Salvador para 'Java developer senior'
+2026-09-16 20:22:25 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Java Spring Boot developer'
+2026-09-16 20:22:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 27 vagas remotas para 'Java Spring Boot developer'
+2026-09-16 20:22:32 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Java Spring Boot developer'
+2026-09-16 20:22:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 1 vagas em Salvador para 'Java Spring Boot developer'
+2026-09-16 20:22:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'JSF'
+2026-09-16 20:22:39 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-16 20:22:39 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'JSF'
+2026-09-16 20:22:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'JSF'
+2026-09-16 20:22:42 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'PrimeFaces'
+2026-09-16 20:22:44 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-16 20:22:44 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'PrimeFaces'
+2026-09-16 20:22:47 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'PrimeFaces'
+2026-09-16 20:22:47 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Legado'
+2026-09-16 20:22:49 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-16 20:22:49 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Legado'
+2026-09-16 20:22:52 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Legado'
+2026-09-16 20:22:52 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'Pl'
+2026-09-16 20:22:54 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-16 20:22:54 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'Pl'
+2026-09-16 20:22:57 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas em Salvador para 'Pl'
+2026-09-16 20:22:57 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'SR'
+2026-09-16 20:22:59 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'SR'
+2026-09-16 20:22:59 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'SR'
+2026-09-16 20:23:04 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 1 vagas em Salvador para 'SR'
+2026-09-16 20:23:04 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas: 'desenvolvedor Java pleno senior'
+2026-09-16 20:23:11 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 29 vagas remotas para 'desenvolvedor Java pleno senior'
+2026-09-16 20:23:11 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando presenciais em Salvador: 'desenvolvedor Java pleno senior'
+2026-09-16 20:23:16 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 1 vagas em Salvador para 'desenvolvedor Java pleno senior'
+2026-09-16 20:23:16 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Total de vagas encontradas: 88
+2026-09-16 20:23:16 [INFO ] b.com.vagas.scheduler.AgendadorBusca - LinkedIn: status=SUCESSO | 88 vagas | vagas=88
+2026-09-16 20:23:16 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-16 20:23:16 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-16 20:23:16 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-16 20:23:23 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 27 vagas para 'java'
+2026-09-16 20:23:23 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-16 20:23:25 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 2 vagas para 'spring boot'
+2026-09-16 20:23:25 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-16 20:23:27 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-16 20:23:27 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 29
+2026-09-16 20:23:27 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: status=SUCESSO | 29 vagas | vagas=29
+2026-09-16 20:23:27 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-16 20:23:27 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-16 20:23:27 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-16 20:23:33 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 2 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-16 20:23:33 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-16 20:23:38 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-java-spring-boot'
+2026-09-16 20:23:38 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 20:23:42 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 20:23:42 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 20:23:47 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 20:23:47 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 5
+2026-09-16 20:23:47 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: status=SUCESSO | 5 vagas | vagas=5
+2026-09-16 20:23:47 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-16 20:23:47 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-16 20:23:53 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 6
+2026-09-16 20:23:53 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: status=SUCESSO | 6 vagas | vagas=6
+2026-09-16 20:23:53 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-16 20:23:53 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-16 20:23:53 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-16 20:23:55 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-16 20:23:55 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-16 20:24:00 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 1 vagas para 'java-spring-boot'
+2026-09-16 20:24:00 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-16 20:24:02 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-16 20:24:02 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-16 20:24:05 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-16 20:24:05 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 1
+2026-09-16 20:24:05 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: status=SUCESSO | 1 vagas | vagas=1
+2026-09-16 20:24:05 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-16 20:24:05 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-16 20:24:05 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java'
+2026-09-16 20:24:10 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 1 vagas para 'desenvolvedor java'
+2026-09-16 20:24:10 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-16 20:24:13 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-16 20:24:13 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'java spring boot'
+2026-09-16 20:24:17 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 1 vagas para 'java spring boot'
+2026-09-16 20:24:17 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-16 20:24:19 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-16 20:24:19 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java pleno'
+2026-09-16 20:24:22 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java pleno'
+2026-09-16 20:24:22 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-16 20:24:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-16 20:24:24 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando: 'desenvolvedor java senior'
+2026-09-16 20:24:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas para 'desenvolvedor java senior'
+2026-09-16 20:24:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-16 20:24:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-16 20:24:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 2
+2026-09-16 20:24:29 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: status=SUCESSO | 2 vagas | vagas=2
+2026-09-16 20:24:29 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-16 20:24:29 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-16 20:24:29 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas: 'desenvolvedor Java senior'
+2026-09-16 20:24:31 [ERROR] br.com.vagas.scraper.ScraperBase - Indeed - página 1: BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403)
+2026-09-16 20:24:31 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-16 20:24:31 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando em Salvador: 'desenvolvedor Java senior'
+2026-09-16 20:24:33 [ERROR] br.com.vagas.scraper.ScraperBase - Indeed - página 1: BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Salvador%2C+BA&fromage=14 (Cloudflare/CAPTCHA, HTTP 403)
+2026-09-16 20:24:33 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas em Salvador para 'desenvolvedor Java senior'
+2026-09-16 20:24:33 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: status=BLOQUEIO | BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403) | vagas=0
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 131
+2026-09-16 20:24:33 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_20-24.html
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_20-24.html
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 131
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   LinkedIn → SUCESSO (88 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Gupy → SUCESSO (29 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Vagas.com → SUCESSO (5 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Programathor → SUCESSO (6 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Catho → SUCESSO (1 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   InfoJobs → SUCESSO (2 vagas)
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Indeed → BLOQUEIO (BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403))
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:24:33 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.
+2026-09-16 20:32:59 [INFO ] br.com.vagas.util.SslAmbiente - HTTPS usando Windows-ROOT (SunMSCAPI). Inclui a CA do Check Point Harmony SASE.
+2026-09-16 20:32:59 [INFO ] br.com.vagas.util.SslAmbiente - JVM java.home=C:\Users\User\.jdks\ms-21.0.12.1 java.version=21.0.12.1
+2026-09-16 20:32:59 [INFO ] br.com.vagas.util.SslAmbiente - SSL trustStore=(não definido) trustStoreType=Windows-ROOT keyStore=(não definido)
+2026-09-16 20:32:59 [INFO ] br.com.vagas.util.SslAmbiente - Env JAVA_TOOL_OPTIONS=(não definido) JDK_JAVA_OPTIONS=(não definido) _JAVA_OPTIONS=(não definido)
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Execução manual iniciada pelo usuário
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Iniciando busca de vagas - 16/09/2026 20:33:06
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: LinkedIn
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scraper.LinkedInScraper - Iniciando busca no LinkedIn...
+2026-09-16 20:33:06 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java developer senior'
+2026-09-16 20:33:16 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 14 vagas remotas para 'Java developer senior'
+2026-09-16 20:33:16 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Java Spring Boot developer'
+2026-09-16 20:33:24 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 15 vagas remotas para 'Java Spring Boot developer'
+2026-09-16 20:33:24 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'JSF'
+2026-09-16 20:33:26 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'JSF'
+2026-09-16 20:33:26 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'PrimeFaces'
+2026-09-16 20:33:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'PrimeFaces'
+2026-09-16 20:33:28 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Legado'
+2026-09-16 20:33:31 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Legado'
+2026-09-16 20:33:31 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'Pl'
+2026-09-16 20:33:34 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'Pl'
+2026-09-16 20:33:34 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'SR'
+2026-09-16 20:33:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 0 vagas remotas para 'SR'
+2026-09-16 20:33:37 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Buscando remotas no Brasil: 'desenvolvedor Java pleno senior'
+2026-09-16 20:33:44 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Encontradas 15 vagas remotas para 'desenvolvedor Java pleno senior'
+2026-09-16 20:33:44 [INFO ] b.com.vagas.scraper.LinkedInScraper - LinkedIn - Total de vagas encontradas: 44
+2026-09-16 20:33:44 [INFO ] b.com.vagas.scheduler.AgendadorBusca - LinkedIn: status=SUCESSO | 44 vagas | vagas=44
+2026-09-16 20:33:44 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Gupy
+2026-09-16 20:33:44 [INFO ] br.com.vagas.scraper.GupyScraper - Iniciando busca na Gupy...
+2026-09-16 20:33:44 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'java'
+2026-09-16 20:33:51 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 12 vagas para 'java'
+2026-09-16 20:33:51 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'spring boot'
+2026-09-16 20:33:53 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'spring boot'
+2026-09-16 20:33:53 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Buscando: 'jsf'
+2026-09-16 20:33:55 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Encontradas 0 vagas para 'jsf'
+2026-09-16 20:33:56 [INFO ] br.com.vagas.scraper.GupyScraper - Gupy - Total de vagas encontradas: 12
+2026-09-16 20:33:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Gupy: status=SUCESSO | 12 vagas | vagas=12
+2026-09-16 20:33:56 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Vagas.com
+2026-09-16 20:33:56 [INFO ] b.com.vagas.scraper.VagasComScraper - Iniciando busca no Vagas.com.br...
+2026-09-16 20:33:56 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java'
+2026-09-16 20:34:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java'
+2026-09-16 20:34:01 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-java-spring-boot'
+2026-09-16 20:34:03 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-java-spring-boot'
+2026-09-16 20:34:03 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 20:34:08 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 1 vagas para 'vagas-de-desenvolvedor-java-pleno'
+2026-09-16 20:34:08 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Buscando: 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 20:34:11 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Encontradas 0 vagas para 'vagas-de-desenvolvedor-java-senior'
+2026-09-16 20:34:11 [INFO ] b.com.vagas.scraper.VagasComScraper - Vagas.com - Total de vagas encontradas: 2
+2026-09-16 20:34:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Vagas.com: status=SUCESSO | 2 vagas | vagas=2
+2026-09-16 20:34:11 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Programathor
+2026-09-16 20:34:11 [INFO ] b.c.v.scraper.ProgramathorScraper - Iniciando busca no Programathor...
+2026-09-16 20:34:17 [INFO ] b.c.v.scraper.ProgramathorScraper - Programathor - Total de vagas encontradas: 3
+2026-09-16 20:34:17 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Programathor: status=SUCESSO | 3 vagas | vagas=3
+2026-09-16 20:34:17 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Catho
+2026-09-16 20:34:17 [INFO ] br.com.vagas.scraper.CathoScraper - Iniciando busca no Catho...
+2026-09-16 20:34:17 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java'
+2026-09-16 20:34:20 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java'
+2026-09-16 20:34:20 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'java-spring-boot'
+2026-09-16 20:34:22 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'java-spring-boot'
+2026-09-16 20:34:22 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-pleno'
+2026-09-16 20:34:24 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-pleno'
+2026-09-16 20:34:24 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Buscando: 'desenvolvedor-java-senior'
+2026-09-16 20:34:26 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Encontradas 0 vagas para 'desenvolvedor-java-senior'
+2026-09-16 20:34:26 [INFO ] br.com.vagas.scraper.CathoScraper - Catho - Total de vagas encontradas: 0
+2026-09-16 20:34:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Catho: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-16 20:34:26 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: InfoJobs
+2026-09-16 20:34:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - Iniciando busca no InfoJobs Brasil...
+2026-09-16 20:34:26 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java'
+2026-09-16 20:34:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java'
+2026-09-16 20:34:29 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'java spring boot'
+2026-09-16 20:34:32 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'java spring boot'
+2026-09-16 20:34:32 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java pleno'
+2026-09-16 20:34:34 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java pleno'
+2026-09-16 20:34:34 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Buscando home office: 'desenvolvedor java senior'
+2026-09-16 20:34:37 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Encontradas 0 vagas home office para 'desenvolvedor java senior'
+2026-09-16 20:34:37 [INFO ] b.com.vagas.scraper.InfoJobsScraper - InfoJobs - Total de vagas encontradas: 0
+2026-09-16 20:34:37 [INFO ] b.com.vagas.scheduler.AgendadorBusca - InfoJobs: status=SEM_VAGAS | HTTP OK, página processada, 0 vagas encontradas | vagas=0
+2026-09-16 20:34:37 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Executando scraper: Indeed
+2026-09-16 20:34:37 [INFO ] br.com.vagas.scraper.IndeedScraper - Iniciando busca no Indeed Brasil...
+2026-09-16 20:34:37 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Buscando remotas no Brasil: 'desenvolvedor Java senior'
+2026-09-16 20:34:39 [ERROR] br.com.vagas.scraper.ScraperBase - Indeed - página 1: BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403)
+2026-09-16 20:34:39 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Encontradas 0 vagas remotas para 'desenvolvedor Java senior'
+2026-09-16 20:34:39 [INFO ] br.com.vagas.scraper.IndeedScraper - Indeed - Total de vagas encontradas: 0
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Indeed: status=BLOQUEIO | BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403) | vagas=0
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas coletadas (com possíveis duplicatas): 61
+2026-09-16 20:34:39 [INFO ] b.c.v.report.GeradorRelatorioHTML - Relatório gerado: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_20-34.html
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório gerado com sucesso!
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Arquivo: C:\dev\projeto\vagas-robot\relatorios\vagas-java-2026-09-16_20-34.html
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Total de vagas no relatório: 61
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   LinkedIn → SUCESSO (44 vagas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Gupy → SUCESSO (12 vagas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Vagas.com → SUCESSO (2 vagas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Programathor → SUCESSO (3 vagas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Catho → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   InfoJobs → SEM_VAGAS (HTTP OK, página processada, 0 vagas encontradas)
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca -   Indeed → BLOQUEIO (BLOQUEIO ANTI-BOT em https://br.indeed.com/jobs?q=desenvolvedor+Java+senior&l=Brasil&fromage=14&remotejob=1 (Cloudflare/CAPTCHA, HTTP 403))
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - ========================================
+2026-09-16 20:34:39 [INFO ] b.com.vagas.scheduler.AgendadorBusca - Relatório aberto no navegador padrão.
