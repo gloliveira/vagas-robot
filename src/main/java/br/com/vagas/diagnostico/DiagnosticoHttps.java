@@ -36,6 +36,7 @@ public class DiagnosticoHttps {
         testarHttps("https://www.catho.com.br");
         testarHttps("https://www.infojobs.com.br");
         testarHttps("https://br.indeed.com");
+        testarHttps("https://www.glassdoor.com.br");
         imprimirCadeia("www.google.com", 443);
         imprimirCadeia("www.linkedin.com", 443);
     }

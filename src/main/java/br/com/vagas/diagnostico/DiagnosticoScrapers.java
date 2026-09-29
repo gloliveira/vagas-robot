@@ -2,6 +2,7 @@ package br.com.vagas.diagnostico;
 
 import br.com.vagas.model.ResultadoBusca;
 import br.com.vagas.scraper.CathoScraper;
+import br.com.vagas.scraper.GlassdoorScraper;
 import br.com.vagas.scraper.GupyScraper;
 import br.com.vagas.scraper.IndeedScraper;
 import br.com.vagas.scraper.InfoJobsScraper;
@@ -28,7 +29,8 @@ public class DiagnosticoScrapers {
                 new ProgramathorScraper(),
                 new CathoScraper(),
                 new InfoJobsScraper(),
-                new IndeedScraper()
+                new IndeedScraper(),
+                new GlassdoorScraper()
         );
         for (ScraperVagas scraper : scrapers) {
             System.out.println("========== " + scraper.getNomePlataforma() + " ==========");

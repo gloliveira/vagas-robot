@@ -4,7 +4,7 @@ Um robô em Java que busca vagas de Desenvolvedor Java Sênior e Pleno nas princ
 
 ## Funcionalidades
 
-- **Busca multicanal**: LinkedIn, Gupy, Vagas.com.br, Programathor, Catho, InfoJobs e Indeed.
+- **Busca multicanal**: LinkedIn, Gupy, Vagas.com.br, Programathor, Catho, InfoJobs, Indeed e Glassdoor.
 - **Filtros**:
   - **Somente vagas remotas no Brasil**. Presencial, híbrido e anúncios no exterior são ignorados.
   - Publicadas há no máximo **14 dias**.
@@ -52,5 +52,6 @@ Cada busca gera um HTML em `relatorios/vagas-java-YYYY-MM-DD_HH-mm.html`.
 | Catho         | HTML `article.offer`                      | URL `/vagas/desenvolvedor-java/`                |
 | InfoJobs      | HTML `/vagas-de-emprego-....aspx`         | Cards `js_cardLink`                             |
 | Indeed        | HTML da busca                             | Costuma bloquear com Cloudflare/CAPTCHA         |
+| Glassdoor     | HTML `/Vaga/jobs.htm` + JSON embutido     | Pode bloquear com Cloudflare/login              |
 
-O Indeed protege a busca com desafio anti-bot. O robô tenta coletar, mas se a página vier como "Security Check" a fonte é ignorada naquela execução — as outras plataformas continuam.
+O Indeed e o Glassdoor protegem a busca com desafio anti-bot. O robô tenta coletar, mas se a página vier como "Security Check" ou tela de login a fonte é ignorada naquela execução — as outras plataformas continuam.

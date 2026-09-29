@@ -19,6 +19,7 @@ import java.util.Scanner;
  *   - Catho
  *   - InfoJobs Brasil
  *   - Indeed Brasil (quando o Cloudflare permitir)
+ *   - Glassdoor Brasil
  *
  * Critérios de busca:
  *   - Somente vagas remotas no Brasil
@@ -150,7 +151,7 @@ public class VagasRobot {
         System.out.println("  ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═══╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝");
         System.out.println();
         System.out.println("  ☕ Robô de Vagas Java Sênior/Pleno v1.1.0");
-        System.out.println("  LinkedIn | Gupy | Vagas.com | Programathor | Catho | InfoJobs | Indeed");
+        System.out.println("  LinkedIn | Gupy | Vagas.com | Programathor | Catho | InfoJobs | Indeed | Glassdoor");
         System.out.println("  Somente vagas remotas no Brasil");
         System.out.println();
     }
@@ -170,7 +171,7 @@ public class VagasRobot {
 
     private static void imprimirConfiguracoes() {
         System.out.println("\n📋 CONFIGURAÇÕES ATUAIS:");
-        System.out.println("  Plataformas: LinkedIn, Gupy, Vagas.com, Programathor, Catho, InfoJobs, Indeed");
+        System.out.println("  Plataformas: LinkedIn, Gupy, Vagas.com, Programathor, Catho, InfoJobs, Indeed, Glassdoor");
         System.out.println("  País: somente Brasil (vagas no exterior são ignoradas)");
         System.out.println("  Modalidade: somente remoto (presencial e híbrido são ignorados)");
         System.out.println("  Máximo de dias desde publicação: " + ConfiguracaoBusca.MAX_DIAS_PUBLICACAO);

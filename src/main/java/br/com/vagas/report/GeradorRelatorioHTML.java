@@ -349,6 +349,7 @@ public class GeradorRelatorioHTML {
                "    .plat-gupy { background: #1a73e8; color: white; }\n" +
                "    .plat-vagascom { background: #ff6b00; color: white; }\n" +
                "    .plat-programathor { background: #6c2bd9; color: white; }\n" +
+               "    .plat-glassdoor { background: #0caa41; color: white; }\n" +
                "    .plat-outro { background: #666; color: white; }\n" +
                "    .vaga-titulo { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.3; }\n" +
                "    .vaga-empresa { font-size: 14px; color: #444; margin-bottom: 4px; }\n" +
