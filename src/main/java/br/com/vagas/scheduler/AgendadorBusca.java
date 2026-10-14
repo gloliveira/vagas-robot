@@ -52,6 +52,7 @@ public class AgendadorBusca {
         lista.add(new InfoJobsScraper());
         lista.add(new IndeedScraper());
         lista.add(new GlassdoorScraper());
+        lista.add(new SolidesScraper());
         return lista;
     }
 

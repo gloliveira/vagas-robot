@@ -206,6 +206,47 @@ public abstract class ScraperBase implements ScraperVagas {
         return vaga;
     }
 
+    /**
+     * Extrai o objeto JSON que começa logo após o marcador, contando chaves.
+     */
+    protected String extrairObjetoJsonApos(String texto, String marcador) {
+        int inicioMarcador = texto.indexOf(marcador);
+        if (inicioMarcador < 0) {
+            return null;
+        }
+        int inicio = texto.indexOf('{', inicioMarcador + marcador.length() - 1);
+        if (inicio < 0) {
+            return null;
+        }
+        int nivel = 0;
+        boolean emString = false;
+        boolean escape = false;
+        for (int i = inicio; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+            if (emString) {
+                if (escape) {
+                    escape = false;
+                } else if (c == '\\') {
+                    escape = true;
+                } else if (c == '"') {
+                    emString = false;
+                }
+                continue;
+            }
+            if (c == '"') {
+                emString = true;
+            } else if (c == '{') {
+                nivel++;
+            } else if (c == '}') {
+                nivel--;
+                if (nivel == 0) {
+                    return texto.substring(inicio, i + 1);
+                }
+            }
+        }
+        return null;
+    }
+
     protected boolean documentoBloqueado(Document doc) {
         if (doc == null) {
             return true;

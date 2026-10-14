@@ -9,6 +9,7 @@ import br.com.vagas.scraper.InfoJobsScraper;
 import br.com.vagas.scraper.LinkedInScraper;
 import br.com.vagas.scraper.ProgramathorScraper;
 import br.com.vagas.scraper.ScraperVagas;
+import br.com.vagas.scraper.SolidesScraper;
 import br.com.vagas.scraper.VagasComScraper;
 import br.com.vagas.util.SslAmbiente;
 
@@ -30,7 +31,8 @@ public class DiagnosticoScrapers {
                 new CathoScraper(),
                 new InfoJobsScraper(),
                 new IndeedScraper(),
-                new GlassdoorScraper()
+                new GlassdoorScraper(),
+                new SolidesScraper()
         );
         for (ScraperVagas scraper : scrapers) {
             System.out.println("========== " + scraper.getNomePlataforma() + " ==========");
