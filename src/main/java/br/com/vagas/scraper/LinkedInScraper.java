@@ -20,6 +20,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Scraper para o LinkedIn usando o endpoint público de vagas (guest API).
@@ -44,6 +46,10 @@ public class LinkedInScraper implements ScraperVagas {
     private static final String BASE_URL = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search";
     // URL de detalhe de vaga
     private static final String DETALHE_URL = "https://www.linkedin.com/jobs/view/";
+    // Detalhe da vaga na guest API (descrição completa)
+    private static final String DETALHE_API_URL = "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/";
+    private static final Pattern JOB_ID_URN = Pattern.compile("jobPosting:(\\d+)");
+    private static final Pattern JOB_ID_URL = Pattern.compile("(\\d{6,})/?$");
 
     // Filtro de tempo: r1209600 = últimas 2 semanas (14 dias * 24h * 3600s)
     private static final String FILTRO_2_SEMANAS = "r1209600";
@@ -237,11 +243,7 @@ public class LinkedInScraper implements ScraperVagas {
             }
             if (ConfiguracaoBusca.SOMENTE_REMOTAS) {
                 String blob = (titulo + " " + localizacao).toLowerCase();
-                if (blob.contains("híbrido") || blob.contains("hibrido") || blob.contains("hybrid")) {
-                    return null;
-                }
-                if ((blob.contains("presencial") || blob.contains("on-site") || blob.contains("onsite"))
-                        && !blob.contains("remoto") && !blob.contains("remote") && !blob.contains("home office")) {
+                if (mencionaHibridoOuPresencial(blob)) {
                     return null;
                 }
             }
@@ -250,6 +252,16 @@ public class LinkedInScraper implements ScraperVagas {
             LocalDate dataPublicacao = DataUtil.parsearData(dataTexto);
             if (!DataUtil.isDentroDoLimite(dataPublicacao, ConfiguracaoBusca.MAX_DIAS_PUBLICACAO)) {
                 return null;
+            }
+
+            // O filtro f_WT=2 deixa passar híbridas/presenciais e o card não traz a modalidade:
+            // vaga com cidade só entra se a descrição confirmar que é remota.
+            if (ConfiguracaoBusca.SOMENTE_REMOTAS && !localizacaoIndicaRemoto(localizacao, titulo)) {
+                String jobId = extrairJobId(item, urlVaga);
+                if (jobId.isEmpty() || !descricaoConfirmaRemoto(jobId)) {
+                    logger.debug("LinkedIn - Descartada (não confirmada como remota): {} | {}", titulo, localizacao);
+                    return null;
+                }
             }
 
             Vaga vaga = new Vaga();
@@ -269,6 +281,53 @@ public class LinkedInScraper implements ScraperVagas {
         } catch (Exception e) {
             logger.debug("LinkedIn - Erro ao extrair vaga: {}", e.getMessage());
             return null;
+        }
+    }
+
+    private boolean mencionaHibridoOuPresencial(String textoMinusculo) {
+        return textoMinusculo.contains("híbrido") || textoMinusculo.contains("hibrido")
+                || textoMinusculo.contains("hybrid")
+                || textoMinusculo.contains("presencial") || textoMinusculo.contains("on-site")
+                || textoMinusculo.contains("onsite") || textoMinusculo.contains("on site");
+    }
+
+    private boolean mencionaRemoto(String textoMinusculo) {
+        return textoMinusculo.contains("remoto") || textoMinusculo.contains("remote")
+                || textoMinusculo.contains("home office") || textoMinusculo.contains("home-office")
+                || textoMinusculo.contains("trabalho a distância") || textoMinusculo.contains("work from home");
+    }
+
+    /** Vagas remotas no LinkedIn costumam ter só o país como local. */
+    private boolean localizacaoIndicaRemoto(String localizacao, String titulo) {
+        String loc = localizacao == null ? "" : localizacao.trim().toLowerCase();
+        if (loc.equals("brazil") || loc.equals("brasil")) {
+            return true;
+        }
+        return mencionaRemoto(loc + " " + (titulo == null ? "" : titulo.toLowerCase()));
+    }
+
+    private String extrairJobId(Element item, String urlVaga) {
+        Element urnEl = item.selectFirst("[data-entity-urn]");
+        if (urnEl != null) {
+            Matcher m = JOB_ID_URN.matcher(urnEl.attr("data-entity-urn"));
+            if (m.find()) {
+                return m.group(1);
+            }
+        }
+        Matcher m = JOB_ID_URL.matcher(urlVaga == null ? "" : urlVaga);
+        return m.find() ? m.group(1) : "";
+    }
+
+    private boolean descricaoConfirmaRemoto(String jobId) {
+        try {
+            Document detalhe = getComRetentativa(DETALHE_API_URL + jobId);
+            Element descricaoEl = detalhe.selectFirst(".show-more-less-html__markup");
+            if (descricaoEl == null) descricaoEl = detalhe.selectFirst(".description__text");
+            String texto = (descricaoEl != null ? descricaoEl.text() : detalhe.text()).toLowerCase();
+            return mencionaRemoto(texto) && !mencionaHibridoOuPresencial(texto);
+        } catch (IOException e) {
+            logger.warn("LinkedIn - Não foi possível abrir o detalhe da vaga {}: {}", jobId, e.getMessage());
+            return false;
         }
     }
 

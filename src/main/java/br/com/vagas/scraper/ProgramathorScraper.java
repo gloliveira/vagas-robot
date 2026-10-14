@@ -1,5 +1,6 @@
 package br.com.vagas.scraper;
 
+import br.com.vagas.config.ConfiguracaoBusca;
 import br.com.vagas.model.ResultadoBusca;
 import br.com.vagas.model.Vaga;
 import br.com.vagas.util.FalhaHttpException;
@@ -96,6 +97,9 @@ public class ProgramathorScraper extends ScraperBase {
 
         String titulo = primeiroTexto(card, "h3");
         if (titulo.isEmpty()) {
+            return null;
+        }
+        if (ConfiguracaoBusca.SOMENTE_REMOTAS && titulo.toUpperCase().contains("PRESENCIAL")) {
             return null;
         }
         titulo = titulo.replace("📍 PRESENCIAL - SOMENTE PARA CANDIDATOS NO LOCAL", "").trim();

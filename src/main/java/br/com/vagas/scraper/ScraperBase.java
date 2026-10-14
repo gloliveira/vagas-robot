@@ -70,8 +70,11 @@ public abstract class ScraperBase implements ScraperVagas {
         return fallback != null ? fallback : "Presencial";
     }
 
+    /**
+     * Híbrido ou presencial explícito no título/local sempre descarta, mesmo que a modalidade padrão seja remota.
+     */
     protected boolean isVagaRemota(String modalidade, String... textos) {
-        StringBuilder sb = new StringBuilder(modalidade == null ? "" : modalidade);
+        StringBuilder sb = new StringBuilder();
         if (textos != null) {
             for (String t : textos) {
                 if (t != null && !t.isBlank()) {
@@ -80,7 +83,12 @@ public abstract class ScraperBase implements ScraperVagas {
             }
         }
         String blob = sb.toString().toLowerCase();
-        if (blob.contains("híbrido") || blob.contains("hibrido") || blob.contains("hybrid")) {
+        if ("Híbrido".equalsIgnoreCase(modalidade)
+                || blob.contains("híbrido") || blob.contains("hibrido") || blob.contains("hybrid")) {
+            return false;
+        }
+        if (blob.contains("presencial") || blob.contains("on-site") || blob.contains("onsite")
+                || blob.contains("on site")) {
             return false;
         }
         return "Remoto".equalsIgnoreCase(modalidade)
@@ -183,9 +191,11 @@ public abstract class ScraperBase implements ScraperVagas {
             return null;
         }
         String modalidadeFinal = detectarModalidade(localizacao, modalidade);
-        if (ConfiguracaoBusca.SOMENTE_REMOTAS
-                && !isVagaRemota(modalidadeFinal, titulo, localizacao)) {
-            return null;
+        if (ConfiguracaoBusca.SOMENTE_REMOTAS) {
+            if (!isVagaRemota(modalidadeFinal, titulo, localizacao)) {
+                return null;
+            }
+            modalidadeFinal = "Remoto";
         }
         LocalDate dataPublicacao = DataUtil.parsearData(dataTexto);
         if (!DataUtil.isDentroDoLimite(dataPublicacao, ConfiguracaoBusca.MAX_DIAS_PUBLICACAO)) {

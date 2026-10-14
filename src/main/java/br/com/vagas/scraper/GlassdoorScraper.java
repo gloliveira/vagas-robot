@@ -215,9 +215,6 @@ public class GlassdoorScraper extends ScraperBase {
                 "[class*=JobCard_location]",
                 "[class*=location]",
                 ".location");
-        if (localizacao.isEmpty()) {
-            localizacao = "Remoto - Brasil";
-        }
         String dataTexto = primeiroTexto(card, "[data-test=job-age]", "[class*=listingAge]", "[class*=JobCard_listingAge]");
         String urlRelativa = primeiroHref(card,
                 "a[data-test=job-title]",
@@ -229,7 +226,8 @@ public class GlassdoorScraper extends ScraperBase {
                 "a");
         String urlVaga = absolutizarUrl(urlRelativa, BASE_URL);
         String extra = card.text();
-        return montarVaga(titulo, empresa, localizacao, "Remoto", dataTexto, urlVaga, "Glassdoor", extra);
+        // O filtro remoteWorkType=1 também devolve vagas com cidade (híbridas/presenciais); só "Trabalho remoto" conta.
+        return montarVaga(titulo, empresa, localizacao, null, dataTexto, urlVaga, "Glassdoor", extra);
     }
 
     private List<Vaga> extrairVagasDoJson(Document doc) {
@@ -325,14 +323,11 @@ public class GlassdoorScraper extends ScraperBase {
 
         String empresa = empresaDoJson(obj);
         String localizacao = textoJson(obj, "locationName", "location");
-        if (localizacao.isEmpty()) {
-            localizacao = "Remoto - Brasil";
-        }
 
         String dataTexto = dataDoJson(obj);
         String urlVaga = urlDoJson(obj);
         String extra = textoJson(obj, "descriptionSnippet", "goc");
-        return montarVaga(titulo, empresa, localizacao, "Remoto", dataTexto, urlVaga, "Glassdoor", extra);
+        return montarVaga(titulo, empresa, localizacao, null, dataTexto, urlVaga, "Glassdoor", extra);
     }
 
     private String empresaDoJson(JsonObject obj) {
