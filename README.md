@@ -46,7 +46,7 @@ Cada busca gera um HTML em `relatorios/vagas-java-YYYY-MM-DD_HH-mm.html`.
 | Plataforma    | Como é consultada                         | Observação                                      |
 |---------------|-------------------------------------------|-------------------------------------------------|
 | LinkedIn      | Guest API pública de vagas                | Fonte mais estável                              |
-| Gupy          | API JSON do portal (`employability-portal`)| Empresas brasileiras que usam Gupy              |
+| Gupy          | API JSON do portal (`/api/job-search/jobs`)| Empresas brasileiras que usam Gupy              |
 | Vagas.com.br  | HTML da busca                             | Listagem server-side                            |
 | Programathor  | HTML `/jobs-java`                         | Foco em vagas de tecnologia                     |
 | Catho         | HTML `article.offer`                      | URL `/vagas/desenvolvedor-java/`                |

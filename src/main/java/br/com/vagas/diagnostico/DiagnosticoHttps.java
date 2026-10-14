@@ -30,7 +30,7 @@ public class DiagnosticoHttps {
         testarHttps("https://www.google.com");
         testarHttps("https://www.linkedin.com");
         testarHttps("https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=java&location=Brasil&start=0");
-        testarHttps("https://employability-portal.gupy.io");
+        testarHttps("https://portal.gupy.io");
         testarHttps("https://www.vagas.com.br");
         testarHttps("https://programathor.com.br");
         testarHttps("https://www.catho.com.br");

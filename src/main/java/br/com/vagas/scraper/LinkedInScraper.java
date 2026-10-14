@@ -4,6 +4,7 @@ import br.com.vagas.config.ConfiguracaoBusca;
 import br.com.vagas.model.ResultadoBusca;
 import br.com.vagas.model.Vaga;
 import br.com.vagas.util.DataUtil;
+import br.com.vagas.util.FalhaHttpException;
 import br.com.vagas.util.FiltroBrasil;
 import br.com.vagas.util.HttpUtil;
 import org.jsoup.nodes.Document;
@@ -57,6 +58,10 @@ public class LinkedInScraper implements ScraperVagas {
     // GeoId do Brasil no LinkedIn
     private static final String GEO_ID_BRASIL = "106057199";
 
+    private static final int HTTP_TOO_MANY_REQUESTS = 429;
+    private static final long[] ESPERAS_429_MS = {15_000, 30_000};
+    private static final long PAUSA_ENTRE_TERMOS_MS = 4_000;
+
     @Override
     public String getNomePlataforma() {
         return "LinkedIn";
@@ -81,16 +86,20 @@ public class LinkedInScraper implements ScraperVagas {
                 "desenvolvedor Java pleno senior"
         );
 
-        for (String termo : termosBusca) {
+        for (int i = 0; i < termosBusca.size(); i++) {
+            String termo = termosBusca.get(i);
+            if (i > 0) {
+                pausar(PAUSA_ENTRE_TERMOS_MS);
+            }
             logger.info("LinkedIn - Buscando remotas no Brasil: '{}'", termo);
             List<Vaga> vagasRemoto = buscarComParametros(termo, "Brasil", GEO_ID_BRASIL,
                     MODALIDADE_REMOTO, "Remoto");
-            if (vagasRemoto == null) {
+            todasVagas.addAll(vagasRemoto);
+            logger.info("LinkedIn - Encontradas {} vagas remotas para '{}'", vagasRemoto.size(), termo);
+            if (ultimaFalha != null) {
                 falha = ultimaFalha;
                 break;
             }
-            todasVagas.addAll(vagasRemoto);
-            logger.info("LinkedIn - Encontradas {} vagas remotas para '{}'", vagasRemoto.size(), termo);
         }
 
         logger.info("LinkedIn - Total de vagas encontradas: {}", todasVagas.size());
@@ -108,7 +117,7 @@ public class LinkedInScraper implements ScraperVagas {
                 String url = construirUrl(keywords, location, geoId, modalidade, start);
                 logger.debug("LinkedIn URL: {}", url);
 
-                Document doc = HttpUtil.get(url);
+                Document doc = getComRetentativa(url);
                 Elements itensVaga = doc.select("li");
 
                 if (itensVaga.isEmpty()) {
@@ -133,11 +142,35 @@ public class LinkedInScraper implements ScraperVagas {
             } catch (IOException e) {
                 ultimaFalha = e;
                 logger.error("LinkedIn - Falha na página {}: {}", pagina + 1, e.getMessage());
-                return null;
+                break;
             }
         }
 
         return vagas;
+    }
+
+    private Document getComRetentativa(String url) throws IOException {
+        for (int tentativa = 0; ; tentativa++) {
+            try {
+                return HttpUtil.get(url);
+            } catch (FalhaHttpException e) {
+                if (e.getHttpStatus() != HTTP_TOO_MANY_REQUESTS || tentativa >= ESPERAS_429_MS.length) {
+                    throw e;
+                }
+                long espera = ESPERAS_429_MS[tentativa];
+                logger.warn("LinkedIn - HTTP 429 (limite de requisições), aguardando {}s antes de tentar novamente",
+                        espera / 1000);
+                pausar(espera);
+            }
+        }
+    }
+
+    private void pausar(long ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     private String construirUrl(String keywords, String location, String geoId,

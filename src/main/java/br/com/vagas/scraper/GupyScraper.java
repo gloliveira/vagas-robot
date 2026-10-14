@@ -20,12 +20,12 @@ import java.util.List;
 
 /**
  * Scraper da Gupy via API pública do portal de vagas.
- * GET https://employability-portal.gupy.io/api/v1/jobs?jobName=...
+ * GET https://portal.gupy.io/api/job-search/jobs?jobName=...&workplaceType=remote
  */
 public class GupyScraper extends ScraperBase {
 
     private static final Logger logger = LoggerFactory.getLogger(GupyScraper.class);
-    private static final String API_URL = "https://employability-portal.gupy.io/api/v1/jobs";
+    private static final String API_URL = "https://portal.gupy.io/api/job-search/jobs";
     private static final String REFERER = "https://portal.gupy.io/";
 
     @Override
@@ -62,7 +62,8 @@ public class GupyScraper extends ScraperBase {
                 String url = API_URL
                         + "?jobName=" + URLEncoder.encode(termo, StandardCharsets.UTF_8)
                         + "&limit=" + limit
-                        + "&offset=" + offset;
+                        + "&offset=" + offset
+                        + "&workplaceType=remote";
                 logger.debug("Gupy URL: {}", url);
 
                 String json = HttpUtil.getJson(url, REFERER);
@@ -129,7 +130,7 @@ public class GupyScraper extends ScraperBase {
         }
 
         String localizacao = juntarLocal(cidade, estado, pais, remoto, workplace);
-        if (!localizacaoCompativel(localizacao, pais, cidade, estado)) {
+        if (!localizacaoCompativel(localizacao, pais, cidade, estado, titulo)) {
             return null;
         }
 
@@ -150,12 +151,17 @@ public class GupyScraper extends ScraperBase {
         return vaga;
     }
 
-    private boolean localizacaoCompativel(String localizacao, String pais, String cidade, String estado) {
+    private boolean localizacaoCompativel(String localizacao, String pais, String cidade, String estado,
+                                          String titulo) {
         if (FiltroBrasil.isPaisBrasil(pais)) {
             return FiltroBrasil.isVagaBrasileira(localizacao, pais, cidade, estado);
         }
-        return FiltroBrasil.temSinalBrasil(localizacao, pais, cidade, estado)
-                && FiltroBrasil.isVagaBrasileira(localizacao, pais, cidade, estado);
+        if (!pais.isEmpty() || !cidade.isEmpty() || !estado.isEmpty()) {
+            return FiltroBrasil.temSinalBrasil(localizacao, pais, cidade, estado)
+                    && FiltroBrasil.isVagaBrasileira(localizacao, pais, cidade, estado);
+        }
+        // A API não informa mais o país; remoto sem cidade/estado só é descartado se o título indicar exterior.
+        return FiltroBrasil.isVagaBrasileira(titulo);
     }
 
     private String juntarLocal(String cidade, String estado, String pais, boolean remoto, String workplace) {
